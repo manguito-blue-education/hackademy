@@ -1,4 +1,12 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+# Rutas funcionales
+- index
+- padawans
+  - contact
+  - about-us
+  - program-info
+
+
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
