@@ -6,26 +6,28 @@ import {
   text,
   btnText,
   content,
-  squareGalleryContent,
-} from "../../data/aboutUsData";
+  wideGalleryContent,
+} from "../../data/chatbotProgramData";
 import { SquareGallery } from "../../components/base/SquareGallery";
 import Layout from "../../components/padawans/Layout";
 import { PadawanRoadMap } from "../../components/padawans/PadawanRoadMap";
+import { WideGallery } from "../../components/base/WideGallery";
 
-const AboutUs = () => {
+function ChatbotProgram() {
   return (
     <Layout>
-      <AboutUsWrapper>
-        <Hero image={"/about-us-header.png"} text={text} btnText={btnText} />
+      <ChatbotProgramWrapper>
+        <Hero image={"/chatbot-header.png"} text={text} btnText={btnText} />
         <Content content={content} />
+        <WideGallery content={wideGalleryContent} />
         <PadawanRoadMap />
-        <SquareGallery content={squareGalleryContent} />
-      </AboutUsWrapper>
+      </ChatbotProgramWrapper>
     </Layout>
   );
-};
+}
 
-const AboutUsWrapper = styled.section`
+const ChatbotProgramWrapper = styled.section`
   background: var(--main-black);
 `;
-export default AboutUs;
+
+export default ChatbotProgram;

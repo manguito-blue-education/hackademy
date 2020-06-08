@@ -1,18 +1,18 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
-export const Hero = ({ text, btnText }) => {
+export const Hero = ({ image, text, btnText }) => {
   return (
     <HeroWrapper>
-      <ImagePlaceholder />
+      <Image src={image} />
       <MainText>{text}</MainText>
       <ContactButtonWrapper>
         <p>{btnText}</p>
         <button>v</button>
       </ContactButtonWrapper>
     </HeroWrapper>
-  )
-}
+  );
+};
 
 const HeroWrapper = styled.section`
   position: relative;
@@ -22,14 +22,14 @@ const HeroWrapper = styled.section`
   grid-template-areas: "main";
   height: 100vh;
   color: #ffffff;
-`
+`;
 
-const ImagePlaceholder = styled.div`
+const Image = styled.img`
+  object-fit: cover;
   grid-area: main;
   height: 100%;
   width: 100%;
-  background: #c4c4c4;
-`
+`;
 
 const MainText = styled.p`
   grid-area: main;
@@ -38,7 +38,7 @@ const MainText = styled.p`
   position: relative;
   bottom: 30px;
   justify-self: center;
-`
+`;
 
 const ContactButtonWrapper = styled.div`
   position: absolute;
@@ -54,4 +54,7 @@ const ContactButtonWrapper = styled.div`
     background: #ffffff;
     border: none;
   }
-`
+  @media screen and (max-width: 970px) {
+    display: none;
+  }
+`;

@@ -6,26 +6,29 @@ import {
   text,
   btnText,
   content,
+  wideGalleryContent,
   squareGalleryContent,
-} from "../../data/aboutUsData";
+} from "../../data/backendProgramData";
+import { WideGallery } from "../../components/base/WideGallery";
 import { SquareGallery } from "../../components/base/SquareGallery";
-import Layout from "../../components/padawans/Layout";
 import { PadawanRoadMap } from "../../components/padawans/PadawanRoadMap";
+import Layout from "../../components/padawans/Layout";
 
-const AboutUs = () => {
+const BackendProgram = () => {
   return (
     <Layout>
-      <AboutUsWrapper>
-        <Hero image={"/about-us-header.png"} text={text} btnText={btnText} />
+      <BackendProgramWrapper>
+        <Hero image={"/backend-header.png"} text={text} btnText={btnText} />
         <Content content={content} />
+        <WideGallery content={wideGalleryContent} />
         <PadawanRoadMap />
-        <SquareGallery content={squareGalleryContent} />
-      </AboutUsWrapper>
+      </BackendProgramWrapper>
     </Layout>
   );
 };
 
-const AboutUsWrapper = styled.section`
+const BackendProgramWrapper = styled.section`
   background: var(--main-black);
 `;
-export default AboutUs;
+
+export default BackendProgram;

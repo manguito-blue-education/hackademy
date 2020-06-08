@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 export const Main = () => {
   return (
@@ -25,25 +25,31 @@ export const Main = () => {
           </TextContainer>
         </TextWrapper>
       </TextSection>
-      <CarouselImages></CarouselImages>
+      <CarouselImages>
+        <img
+          style={{ objectFit: "cover", height: "100%", width: "100%" }}
+          src="/main-slide-one.png"
+          alt="Imagen 1 del slider"
+        />
+      </CarouselImages>
       <CarouselController></CarouselController>
     </PadawansMain>
-  )
-}
+  );
+};
 
 const PadawansMain = styled.main`
   display: grid;
   height: 100vh;
   width: 100vw;
-  grid-template-columns: minmax(450px, 1fr) minmax(450px, 660px) 170px;
+  grid-template-columns: minmax(600px, 1fr) minmax(450px, 660px) 170px;
   background: var(--main-black);
-`
+`;
 
-const TextSection = styled.section``
+const TextSection = styled.section``;
 const CarouselImages = styled.section`
   background: grey;
-`
-const CarouselController = styled.section``
+`;
+const CarouselController = styled.section``;
 
 const TextWrapper = styled.div`
   color: #fff;
@@ -51,7 +57,7 @@ const TextWrapper = styled.div`
   height: 100%;
   justify-content: center;
   align-items: center;
-`
+`;
 const TextContainer = styled.div`
   max-width: 525px;
   text-align: justify;
@@ -65,4 +71,4 @@ const TextContainer = styled.div`
     max-width: 325px;
     margin-bottom: 20px;
   }
-`
+`;

@@ -6,8 +6,16 @@ export const WideGallery = ({ content }) => {
   const makeGallery = images =>
     images.map(({ src, title, subtitle }, idx) => (
       <div key={idx}>
-        {/* <img src={src} alt={`Image of ${title}`} /> */}
-        <ImagePlaceHolder />
+        <img
+          style={{
+            objectFit: "contain",
+            width: "100%",
+            height: 500,
+            display: "block",
+          }}
+          src={src}
+          alt={`Image of ${title}`}
+        />
         <div>
           <p>{title}</p>
           <p>{subtitle}</p>
@@ -26,6 +34,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
+  justify-items: center;
 `;
 
 const ImagePlaceHolder = styled.div`

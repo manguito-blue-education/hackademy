@@ -6,26 +6,28 @@ import {
   text,
   btnText,
   content,
-  squareGalleryContent,
-} from "../../data/aboutUsData";
+  wideGalleryContent,
+} from "../../data/mobileProgramData";
 import { SquareGallery } from "../../components/base/SquareGallery";
 import Layout from "../../components/padawans/Layout";
 import { PadawanRoadMap } from "../../components/padawans/PadawanRoadMap";
+import { WideGallery } from "../../components/base/WideGallery";
 
-const AboutUs = () => {
+function MobileProgram() {
   return (
     <Layout>
-      <AboutUsWrapper>
-        <Hero image={"/about-us-header.png"} text={text} btnText={btnText} />
+      <MobileProgramWrapper>
+        <Hero image={"/mobile-header.png"} text={text} btnText={btnText} />
         <Content content={content} />
+        <WideGallery content={wideGalleryContent} />
         <PadawanRoadMap />
-        <SquareGallery content={squareGalleryContent} />
-      </AboutUsWrapper>
+      </MobileProgramWrapper>
     </Layout>
   );
-};
+}
 
-const AboutUsWrapper = styled.section`
+const MobileProgramWrapper = styled.section`
   background: var(--main-black);
 `;
-export default AboutUs;
+
+export default MobileProgram;

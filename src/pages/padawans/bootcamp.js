@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { PadawanRoadMap } from "../../components/padawans/PadawanRoadMap";
+import Layout from "../../components/padawans/Layout";
 
 const Bootcamp = () => {
   const benefits = [
@@ -10,62 +12,74 @@ const Bootcamp = () => {
     "Acceso a entrevistas de empleo",
     "Acceso a becas del 100%",
   ];
+  const requirements = [
+    "Resolver por lo menos 5 ejercicios del  Club de programación",
+    "Agendar entrevista con el equipo de Hackademy",
+    "Firmar carta compromiso",
+    "Disponibilidad de 4 horas diarias",
+    "Actitud y ganas de aprender",
+  ];
 
   return (
-    <BootcampContainer>
-      <BootcampWrapper>
-        <Content>
-          <Title>Bootcamp</Title>
-          <Subtitle>
-            El entrenamiento de Hackademy tiene como analogía el entrenamiento
-            que los deportistas tienen para ir a las olimpiadas, trabajamos duro
-            para ser los mejores
-          </Subtitle>
-          <TextWrapper>
-            <Text>
-              En Hackademy buscamos desarrollar el talento que tienes de la
-              mejor manera y por eso hemos dividido nuestro programa en
-              especialidades. Estas especialides cubren cada una de las partes
-              que se requieren en el desarrollo de software: Backend, Frontend,
-              desarrollo móvil, adminsitración de proyectos, desarrollo de
-              chatbots y seguridad informtica.
-            </Text>
-            <Text>
-              Cada uno de los programas cuenta con un grupo de mentores que
-              comparten su experiencia para que puedas mejorar tus habilidades
-              de una mejor forma, para nosotros el talento y las habilidades son
-              como los musculos y por eso hay que entrenar.
-            </Text>
-          </TextWrapper>
-          <div>
-            <BenefitsTitle>Beneficios</BenefitsTitle>
-            <BenefitsList>
-              {benefits.map((benefit, idx) => (
-                <Benefit key={idx}>- {benefit}</Benefit>
-              ))}
-            </BenefitsList>
-          </div>
-        </Content>
-        <Grid>
-          <ColumnOne>
-            <ImagePlaceOne />
-            <ImagePlaceOne />
-            <ImagePlaceTwo />
-          </ColumnOne>
-          <ColumnTwo>
-            <ImagePlaceTwo />
-            <ImagePlaceOne />
-            <ImagePlaceOne />
-          </ColumnTwo>
-        </Grid>
-      </BootcampWrapper>
-    </BootcampContainer>
+    <Layout>
+      <BootcampContainer>
+        <BootcampWrapper>
+          <Content>
+            <Title>Bootcamp</Title>
+            <Subtitle>
+              El entrenamiento de Hackademy tiene como analogía el entrenamiento
+              que los deportistas tienen para ir a las olimpiadas, trabajamos
+              duro para ser los mejores
+            </Subtitle>
+            <TextWrapper>
+              <Text>
+                En Hackademy buscamos desarrollar el talento que tienes de la
+                mejor manera y por eso hemos dividido nuestro programa en
+                especialidades. Estas especialides cubren cada una de las partes
+                que se requieren en el desarrollo de software: Backend,
+                Frontend, desarrollo móvil, adminsitración de proyectos,
+                desarrollo de chatbots y seguridad informtica.
+              </Text>
+              <Text>
+                Cada uno de los programas cuenta con un grupo de mentores que
+                comparten su experiencia para que puedas mejorar tus habilidades
+                de una mejor forma, para nosotros el talento y las habilidades
+                son como los musculos y por eso hay que entrenar.
+              </Text>
+            </TextWrapper>
+            <div>
+              <BenefitsTitle>Beneficios</BenefitsTitle>
+              <BenefitsList>
+                {benefits.map((benefit, idx) => (
+                  <Benefit key={idx}>- {benefit}</Benefit>
+                ))}
+              </BenefitsList>
+            </div>
+            <div style={{ marginTop: 20 }}>
+              <BenefitsTitle>Requisitos</BenefitsTitle>
+              <BenefitsList>
+                {requirements.map((requirement, idx) => (
+                  <Benefit key={idx}>- {requirement}</Benefit>
+                ))}
+              </BenefitsList>
+            </div>
+          </Content>
+        </BootcampWrapper>
+        <img
+          style={{ width: "100%", objectFit: "cover" }}
+          src={"/padawans.png"}
+          alt="Imagen de nuestros padawans"
+        />
+        <PadawanRoadMap />
+      </BootcampContainer>
+    </Layout>
   );
 };
 
 const BootcampContainer = styled.section`
   background: var(--main-black);
   color: #ffffff;
+  padding-top: 125px;
 `;
 
 const BootcampWrapper = styled.div`

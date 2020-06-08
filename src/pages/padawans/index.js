@@ -1,10 +1,11 @@
-import React from "react"
-import { Main } from "../../components/padawans/Main"
+import React from "react";
+import Layout from "../../components/padawans/Layout";
+import { Main } from "../../components/padawans/Main";
 
 export default function Index() {
   return (
-    <div>
+    <Layout>
       <Main />
-    </div>
-  )
+    </Layout>
+  );
 }

@@ -6,26 +6,26 @@ import {
   text,
   btnText,
   content,
-  squareGalleryContent,
-} from "../../data/aboutUsData";
+  wideGalleryContent,
+} from "../../data/programmingClubData";
 import { SquareGallery } from "../../components/base/SquareGallery";
 import Layout from "../../components/padawans/Layout";
 import { PadawanRoadMap } from "../../components/padawans/PadawanRoadMap";
 
-const AboutUs = () => {
+function ProgrammingClub() {
   return (
     <Layout>
-      <AboutUsWrapper>
-        <Hero image={"/about-us-header.png"} text={text} btnText={btnText} />
+      <ProgrammingClubWrapper>
+        <Hero image={"/padawans.png"} text={text} btnText={btnText} />
         <Content content={content} />
         <PadawanRoadMap />
-        <SquareGallery content={squareGalleryContent} />
-      </AboutUsWrapper>
+      </ProgrammingClubWrapper>
     </Layout>
   );
-};
+}
 
-const AboutUsWrapper = styled.section`
+const ProgrammingClubWrapper = styled.section`
   background: var(--main-black);
 `;
-export default AboutUs;
+
+export default ProgrammingClub;

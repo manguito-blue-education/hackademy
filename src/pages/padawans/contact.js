@@ -1,33 +1,33 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
+import Layout from "../../components/padawans/Layout";
 
 function Contact() {
   return (
-    <div>
+    <Layout>
       <Grid>
         {/* <img src="" alt="" /> */}
-        <ImagePlaceholder />
-        <MainText>Lorem ipsum dolor sit amet, consectetur adipiscing</MainText>
+        <Image src={"/padawans.png"} />
         <ContactButtonWrapper>
-          <p>Contact Us</p>
+          <p>Contáctanos</p>
           <button>v</button>
         </ContactButtonWrapper>
       </Grid>
       <FormContainer>
         <FormWrapper>
-          <FormTitle>Just a form. It’s easy.</FormTitle>
+          <FormTitle>¡Hola! Queremos saber de ti</FormTitle>
           <Form>
             <NameEmailWrapper>
-              <Input placeholder="Full Name" type="text" />
-              <Input placeholder="Email Address" type="text" />
+              <Input placeholder="Nombre" type="text" />
+              <Input placeholder="Correo" type="text" />
             </NameEmailWrapper>
-            <Input placeholder="Comment" type="text" />
-            <SendButton>SEND MESSAGE</SendButton>
+            <Input placeholder="Mensaje" type="text" />
+            <SendButton>ENVIAR MENSAJE</SendButton>
           </Form>
         </FormWrapper>
       </FormContainer>
-    </div>
-  )
+    </Layout>
+  );
 }
 
 const Grid = styled.section`
@@ -37,7 +37,7 @@ const Grid = styled.section`
   grid-template-rows: 1fr;
   grid-template-areas: "main";
   height: 100vh;
-`
+`;
 
 const MainText = styled.h1`
   grid-area: main;
@@ -51,14 +51,15 @@ const MainText = styled.h1`
   line-height: 79px;
   letter-spacing: 0.035em;
   color: #ffffff;
-`
+`;
 
-const ImagePlaceholder = styled.div`
+const Image = styled.img`
   grid-area: main;
   height: 100%;
   width: 100%;
   background: #c4c4c4;
-`
+  object-fit: cover;
+`;
 
 const ContactButtonWrapper = styled.div`
   position: absolute;
@@ -74,7 +75,12 @@ const ContactButtonWrapper = styled.div`
     background: #ffffff;
     border: none;
   }
-`
+  p {
+    font-size: 19px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+`;
 
 const FormContainer = styled.section`
   height: 80vh;
@@ -83,11 +89,11 @@ const FormContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const FormWrapper = styled.div`
   min-width: min(955px, calc(100vw - (2 * 15vmin)));
-`
+`;
 
 const FormTitle = styled.h2`
   margin: 0 auto;
@@ -97,9 +103,9 @@ const FormTitle = styled.h2`
   text-align: center;
   letter-spacing: 0.07em;
   color: #ffffff;
-`
+`;
 
-const Form = styled.form``
+const Form = styled.form``;
 
 const Input = styled.input`
   box-sizing: border-box;
@@ -115,7 +121,7 @@ const Input = styled.input`
   background: none;
   border: none;
   border-bottom: 1px solid #757575;
-`
+`;
 
 const NameEmailWrapper = styled.div`
   display: flex;
@@ -126,7 +132,7 @@ const NameEmailWrapper = styled.div`
     margin-left: 20px;
   }
   margin: 60px 0 40px;
-`
+`;
 
 const SendButton = styled.button`
   border: none;
@@ -141,6 +147,6 @@ const SendButton = styled.button`
   color: #000000;
   margin-top: 40px;
   cursor: pointer;
-`
+`;
 
-export default Contact
+export default Contact;

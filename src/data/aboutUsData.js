@@ -1,5 +1,5 @@
-export const text = `Hackademy no es un curso, nos enfocamos en el nivel más alto de la capacitación y trabajamos directamente en la practica y la implementación de los conocimientos que han adquirido previamente. `
-export const btnText = `HACKADEMY`
+export const text = `Hackademy no es un curso, nos enfocamos en el nivel más alto de la capacitación y trabajamos directamente en la practica y la implementación de los conocimientos que han adquirido previamente. `;
+export const btnText = `HACKADEMY`;
 export const content = [
   {
     title: "THE STORY",
@@ -40,7 +40,7 @@ export const content = [
       },
     ],
   },
-]
+];
 
 export const wideGalleryContent = {
   text: `Nuestro programa es 100% sin costo monetario, es completamente becado por empresas qeu buscan talento... Solo te pedimos una inversión de minimo 4 horas diarias de practica`,
@@ -50,4 +50,18 @@ export const wideGalleryContent = {
     { src: "", title: "Jeremy Evans", subtitle: "CEO" },
     { src: "", title: "Jeremy Evans", subtitle: "CEO" },
   ],
-}
+};
+
+export const squareGalleryContent = {
+  text: "Nuestros partners",
+  images: [
+    { src: "" },
+    { src: "" },
+    { src: "" },
+    { src: "" },
+    { src: "" },
+    { src: "" },
+    { src: "" },
+    { src: "" },
+  ],
+};
