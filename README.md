@@ -2,9 +2,15 @@
 # Rutas funcionales
 - index
 - padawans
-  - contact
   - about-us
-  - program-info
+  - backend-program
+  - bootcamp
+  - chatbot-program
+  - contact
+  - front-program
+  - index
+  - mobile-program
+  - programming-club
 
 
 <p align="center">
