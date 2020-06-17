@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { slideTexts, slideImages } from "../../data/padawansMainData";
+import { navigate } from "gatsby";
 
 export const Main = () => {
   const slides = [0, 0, 0];
@@ -27,7 +28,7 @@ export const Main = () => {
             {createText(slideTexts[currentIndex])}
             <MoreWrapper>
               <strong>Saber más</strong>
-              <MoreBtn>
+              <MoreBtn onClick={() => navigate("/padawans/about-us")}>
                 <img src="/more-arrow.svg" alt="Flecha botón para saber más " />
               </MoreBtn>
             </MoreWrapper>
