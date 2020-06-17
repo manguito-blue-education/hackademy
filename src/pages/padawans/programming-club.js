@@ -11,6 +11,7 @@ import {
 import { SquareGallery } from "../../components/base/SquareGallery";
 import Layout from "../../components/padawans/Layout";
 import { PadawanRoadMap } from "../../components/padawans/PadawanRoadMap";
+import { FooterForm } from "../../components/base/FooterForm";
 
 function ProgrammingClub() {
   return (
@@ -19,6 +20,8 @@ function ProgrammingClub() {
         <Hero image={"/padawans.png"} text={text} btnText={btnText} />
         <Content content={content} />
         <PadawanRoadMap />
+        <SquareGallery content={{ text: "Nuestros partners", images: ["/github.png", "/aws.png", "/claribot.png", "/unesco.png", "/tomato.png", "/ashoka.png"] }} />
+        <FooterForm />
       </ProgrammingClubWrapper>
     </Layout>
   );

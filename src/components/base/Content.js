@@ -73,6 +73,12 @@ export const Content = ({ content }) => {
           </div>
         </Grid>
       ))}
+      <Grid>
+        <Title></Title>
+        <div>
+          <Subtitle>Nuestro programa es 100% sin costo monetario, es completamente becado por empresas qeu buscan talento... Solo te pedimos una inversión de minimo 4 horas diarias de practica</Subtitle>
+        </div>
+      </Grid>
     </>
   );
 };

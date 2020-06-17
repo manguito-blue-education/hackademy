@@ -39,7 +39,7 @@ export const content = [
         ],
       },
     ],
-  },
+  }
 ];
 
 export const wideGalleryContent = {

@@ -12,6 +12,7 @@ import { SquareGallery } from "../../components/base/SquareGallery";
 import Layout from "../../components/padawans/Layout";
 import { PadawanRoadMap } from "../../components/padawans/PadawanRoadMap";
 import { WideGallery } from "../../components/base/WideGallery";
+import { FooterForm } from "../../components/base/FooterForm";
 
 function ChatbotProgram() {
   return (
@@ -21,6 +22,8 @@ function ChatbotProgram() {
         <Content content={content} />
         <WideGallery content={wideGalleryContent} />
         <PadawanRoadMap />
+        <SquareGallery content={{ text: "Nuestros partners", images: ["/github.png", "/aws.png", "/claribot.png", "/unesco.png", "/tomato.png", "/ashoka.png"] }} />
+        <FooterForm></FooterForm>
       </ChatbotProgramWrapper>
     </Layout>
   );

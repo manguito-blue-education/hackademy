@@ -124,6 +124,7 @@ const PadawanRoadMapImage = styled.img`
 
 const Subtitle = styled.h2`
   max-width: var(--max-width);
+  color: #ffffff;
   margin: 25px auto;
   margin-top: 120px;
   font-size: 27px;

@@ -123,4 +123,5 @@ const FooterWrap = styled.section`
 display: flex;
 flex-wrap: wrap;
 min-height: 460px;
+color: #ffffff;
 `
