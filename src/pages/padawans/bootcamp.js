@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { PadawanRoadMap } from "../../components/padawans/PadawanRoadMap";
 import Layout from "../../components/padawans/Layout";
+import { FooterForm } from "../../components/base/FooterForm"
 
 const Bootcamp = () => {
   const benefits = [
@@ -66,15 +67,47 @@ const Bootcamp = () => {
           </Content>
         </BootcampWrapper>
         <img
-          style={{ width: "100%", objectFit: "cover" }}
+          style={{ width: "100%", objectFit: "cover", margin: "60px 0" }}
           src={"/padawans.png"}
           alt="Imagen de nuestros padawans"
         />
+        <BootcampWrapper>
+          <Content>
+            <Subtitle>
+              Hackademy es un bootcamp intensivo donde nuestros padawans (llamamos así a nuestros aprendices)
+              pueden mejorar sus habilidades técnicas a través de la práctica, desarrollando un proyecto de la vida real,
+              apoyados por mentores expertos que están trabajando en la industria del desarrollo de software.
+            </Subtitle>
+            <TextWrapper>
+              <Text>
+                Nuestros padawans tienen 16 semanas para desarrollar la versión 1 de un proyecto real con el que, durante las entrevistas, pueden demostrar lo que han aprendido, mejorado y lo que los diferencia del resto.
+                El programa beneficia al padawan, mejorando sus habilidades, así como a las empresas que están en búsqueda de talento al obtener acceso a los elementos mejor preparados.
+                Cada padawan inicia aprendiendo sobre GIT y SCRUM durante las 2 primeras semanas del bootcamp para tener las bases necesarias para iniciar el camino y especializarse en un área del desarrollo.
+                <ProgramsList>
+                  <li>Development</li>
+                  <li>Frontend (ReactJS/Angular)</li>
+                  <li>Backend (NodeJS/Python)</li>
+                  <li>Android (React Native)</li>
+                  <li>Desarrollo de chatbots</li>
+                  <li>Administración de proyectos</li>
+                  <li>Agile (Scrum)</li>
+                  <li>Management 3.0 - DevOps</li>
+                </ProgramsList>
+              </Text>
+            </TextWrapper>
+          </Content>
+        </BootcampWrapper>
         <PadawanRoadMap />
+        <FooterForm />
       </BootcampContainer>
     </Layout>
   );
 };
+
+const ProgramsList = styled.section`
+  list-style-type: circle;
+  margin-left: 20px;
+`
 
 const BootcampContainer = styled.section`
   background: var(--main-black);
@@ -139,8 +172,9 @@ const Text = styled.p`
 `;
 
 const BenefitsTitle = styled.p`
-  font-size: 18px;
+  font-size: 24px;
   line-height: 204.19%;
+  font-weight: bold;
   letter-spacing: 0.015em;
 `;
 

@@ -1,14 +1,19 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export const Main = () => {
   return (
     <MainSection>
       <PadawansSection>
-        <div>Ut sit nunc arcu neque leo.</div>
+        <div>
+          <Link to="/padawans">
+            Entrenamiento
+          </Link>
+        </div>
       </PadawansSection>
       <EnterpriseSection>
-        <div>Ut sit nunc arcu neque leo.</div>
+        <div>Empresas</div>
       </EnterpriseSection>
     </MainSection>
   )

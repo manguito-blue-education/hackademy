@@ -5,6 +5,9 @@ export const PadawanRoadMap = () => {
   return (
     <PadawanRoadMapWrapper>
       <PadawanRoadMapTextWrapper>
+        <Subtitle>
+          El camino del padawan:
+        </Subtitle>
         <Grid>
           <TextContainer>
             <Text>
@@ -115,4 +118,15 @@ const PadawanRoadMapImage = styled.img`
   z-index: 2;
   margin-top: -6vmin;
   width: 100%;
+`;
+
+
+
+const Subtitle = styled.h2`
+  max-width: var(--max-width);
+  margin: 25px auto;
+  margin-top: 120px;
+  font-size: 27px;
+  line-height: 32px;
+  letter-spacing: 0.04em;
 `;
